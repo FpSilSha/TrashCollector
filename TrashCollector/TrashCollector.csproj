@@ -185,6 +185,10 @@
     <Compile Include="Migrations\201903061628577_InitialCreate.Designer.cs">
       <DependentUpon>201903061628577_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903090058144_Cust_Empl_PicUp_tbls.cs" />
+    <Compile Include="Migrations\201903090058144_Cust_Empl_PicUp_tbls.Designer.cs">
+      <DependentUpon>201903090058144_Cust_Empl_PicUp_tbls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -274,6 +278,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903061628577_InitialCreate.resx">
       <DependentUpon>201903061628577_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903090058144_Cust_Empl_PicUp_tbls.resx">
+      <DependentUpon>201903090058144_Cust_Empl_PicUp_tbls.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
