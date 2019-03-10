@@ -12,13 +12,14 @@ namespace TrashCollector
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            CreateRolesandUsers();
         }
-        private void createRolesandUsers()
+        private void CreateRolesandUsers()
         {
-            ApplicationDbContext context = new ApplicationDbContext();
+            ApplicationDbContext db = new ApplicationDbContext();
 
-            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
 
 
             // In Startup iam creating first Admin Role and creating a default Admin User    
