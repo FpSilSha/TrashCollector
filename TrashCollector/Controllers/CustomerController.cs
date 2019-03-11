@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrashCollector.Models;
+using Microsoft.AspNet.Identity;
 
 namespace TrashCollector.Controllers
 {
     public class CustomerController : Controller
     {
+        ApplicationDbContext db;
+        public CustomerController()
+        {
+            db = new ApplicationDbContext();
+        }
         // GET: Customer
         public ActionResult Index()
         {
@@ -28,12 +35,13 @@ namespace TrashCollector.Controllers
 
         // POST: Customer/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Customer customer)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                customer.ApplicationUserId = User.Identity.GetUserId();
+                db.Customers.Add(customer);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
