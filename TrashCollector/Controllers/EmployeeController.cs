@@ -64,6 +64,8 @@ namespace TrashCollector.Controllers
             {
                 var pickupToUpdate = db.PickUps.Where(p => p.CustomerId == customer.Id).Single();
                 pickupToUpdate.PickupCompleted = true;
+                pickupToUpdate.CurrentCharges += 25.0m;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
