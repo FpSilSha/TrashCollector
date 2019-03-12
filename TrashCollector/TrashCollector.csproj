@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201903111812344_ProperKeys.Designer.cs">
       <DependentUpon>201903111812344_ProperKeys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903121306341_AddingPickUpBool.cs" />
+    <Compile Include="Migrations\201903121306341_AddingPickUpBool.Designer.cs">
+      <DependentUpon>201903121306341_AddingPickUpBool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -302,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903111812344_ProperKeys.resx">
       <DependentUpon>201903111812344_ProperKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121306341_AddingPickUpBool.resx">
+      <DependentUpon>201903121306341_AddingPickUpBool.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

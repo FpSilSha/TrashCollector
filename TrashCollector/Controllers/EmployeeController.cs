@@ -58,12 +58,12 @@ namespace TrashCollector.Controllers
 
         // POST: Employee/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Customer customer)
         {
             try
             {
-                // TODO: Add update logic here
-
+                var pickupToUpdate = db.PickUps.Where(p => p.CustomerId == customer.Id).Single();
+                pickupToUpdate.PickupCompleted = true;
                 return RedirectToAction("Index");
             }
             catch

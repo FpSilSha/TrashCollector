@@ -17,6 +17,7 @@ namespace TrashCollector.Models
         public DateTime? SuspendStart { get; set; }
         public DateTime? SuspendEnd { get; set; }
         public decimal CurrentCharges { get; set; }
+        public bool? PickupCompleted { get; set; }
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
