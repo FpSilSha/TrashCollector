@@ -44,7 +44,7 @@ namespace TrashCollector.Controllers
                 pickUps.CustomerId = customer.Id;
                 db.PickUps.Add(pickUps);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Customer");
             }
             catch
             {
