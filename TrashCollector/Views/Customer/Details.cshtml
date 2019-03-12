@@ -1,0 +1,71 @@
+﻿@model TrashCollector.Models.PickUps
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div>
+    <h4>Your current details.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickUpDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickUpDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtraDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtraDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuspendStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuspendStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuspendEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuspendEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentCharges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentCharges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickupCompleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickupCompleted)
+        </dd>
+
+    </dl>
+</div>
+
